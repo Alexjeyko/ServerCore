@@ -17,6 +17,7 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new JoinListener(), this);
 		pm.registerEvents(new QuitListener(), this);
 		pm.registerEvents(new DeathListener(), this);
+		// BLA BLA FICKI FICKi
 	}
 	
 	@Override
