@@ -1,0 +1,34 @@
+package me.screenmaex.main;
+
+import me.screenmaex.listeners.DeathListener;
+import me.screenmaex.listeners.JoinListener;
+import me.screenmaex.listeners.KickListener;
+import me.screenmaex.listeners.QuitListener;
+
+import org.bukkit.plugin.PluginManager;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class Main extends JavaPlugin {
+	
+	@Override
+	public void onEnable(){
+		System.out.println("Server-Core aktiviert!");
+		PluginManager pm = this.getServer().getPluginManager();
+		pm.registerEvents(new JoinListener(), this);
+		pm.registerEvents(new QuitListener(), this);
+		pm.registerEvents(new KickListener(), this);
+		pm.registerEvents(new DeathListener(), this);
+	}
+	
+	@Override
+	public void onDisable(){
+		System.out.println("Server-Core deaktiviert!");
+	}
+	
+	
+	
+	
+	
+
+}
+
