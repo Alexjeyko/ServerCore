@@ -16,7 +16,6 @@ public class Main extends JavaPlugin {
 		PluginManager pm = this.getServer().getPluginManager();
 		pm.registerEvents(new JoinListener(), this);
 		pm.registerEvents(new QuitListener(), this);
-		pm.registerEvents(new KickListener(), this);
 		pm.registerEvents(new DeathListener(), this);
 	}
 	
